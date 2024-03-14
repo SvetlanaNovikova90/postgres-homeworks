@@ -4,7 +4,8 @@ CREATE TABLE employers
  first_name varchar(100) NOT NULL,
  last_name varchar(100) NOT NULL,
  title varchar(100) NOT NULL,
- birth_date date NOT NULL
+ birth_date date NOT NULL,
+ notes text
 );
 
 CREATE TABLE customers
@@ -18,5 +19,5 @@ CREATE TABLE orders
  customer_id varchar(20) REFERENCES customers(customer_id) NOT NULL,
  employee_id int REFERENCES employers(employee_id) NOT NULL,
  order_date date NOT NULL,
- ship_city varchar(50)
+ ship_city varchar(40) NOT NULL
 );
